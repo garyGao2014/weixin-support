@@ -7,10 +7,16 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 
 /**
+ * access_token api
+ *
  * @author garygao
  **/
 public class TokenApi extends BaseApi {
+    /**
+     * 获取access_token uri
+     */
     private static final String TOKEN = "/cgi-bin/token";
+
     private static final String GRANT_TYPE = "client_credential";
 
     /**
@@ -21,12 +27,12 @@ public class TokenApi extends BaseApi {
      * @return
      */
     public static Token token(String appid, String secret) {
-        HttpUriRequest httpUriRequest = RequestBuilder.get()
+        HttpUriRequest request = RequestBuilder.get()
                 .setUri(BASE_URI + TOKEN)
                 .addParameter("grant_type", GRANT_TYPE)
                 .addParameter("appid", appid)
                 .addParameter("secret", secret)
                 .build();
-        return LocalHttpClient.executeJsonResult(httpUriRequest, Token.class);
+        return LocalHttpClient.executeJsonResult(request, Token.class);
     }
 }

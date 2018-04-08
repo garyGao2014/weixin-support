@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 全局返回码说明
+ * 微信全局返回码说明
  *
  * @author garygao
  **/

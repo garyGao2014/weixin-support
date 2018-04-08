@@ -1,10 +1,8 @@
 package com.github.gary.api.menu;
 
 import com.github.gary.api.BaseApi;
-import com.github.gary.api.token.TokenApi;
 import com.github.gary.bean.BaseResult;
 import com.github.gary.bean.menu.*;
-import com.github.gary.bean.token.Token;
 import com.github.gary.client.LocalHttpClient;
 import com.github.gary.tool.JsonTool;
 import org.apache.http.client.methods.HttpUriRequest;
@@ -15,6 +13,8 @@ import java.nio.charset.Charset;
 import java.util.Arrays;
 
 /**
+ * 菜单api
+ *
  * @author garygao
  **/
 public class MenuApi extends BaseApi {
@@ -33,15 +33,15 @@ public class MenuApi extends BaseApi {
     /**
      * 个性化菜单新增uri
      */
-    private final static String ADDCONDITIONAL = "/cgi-bin/menu/addconditional";
+    private final static String ADD_CONDITIONAL = "/cgi-bin/menu/addconditional";
     /**
      * 个性化菜单删除uri
      */
-    private final static String DELCONDITIONAL = "/cgi-bin/menu/delconditional";
+    private final static String DEL_CONDITIONAL = "/cgi-bin/menu/delconditional";
     /**
      * 测试个性化菜单匹配结果uri
      */
-    private final static String TRYMATCH = "/cgi-bin/menu/trymatch";
+    private final static String TRY_MATCH = "/cgi-bin/menu/trymatch";
 
     /**
      * 自定义菜单[创建]接口(包含默认菜单和个性化菜单)
@@ -119,7 +119,7 @@ public class MenuApi extends BaseApi {
      */
     public static Menu menuAddConditional(String access_token, String menuJson) {
         HttpUriRequest request = RequestBuilder.post()
-                .setUri(BASE_URI + ADDCONDITIONAL)
+                .setUri(BASE_URI + ADD_CONDITIONAL)
                 .setHeader(jsonHeader)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
                 .setEntity(new StringEntity(menuJson, Charset.forName("utf-8")))
@@ -136,7 +136,7 @@ public class MenuApi extends BaseApi {
      */
     public static BaseResult menuDelConditional(String access_token, String menuid) {
         HttpUriRequest request = RequestBuilder.post()
-                .setUri(BASE_URI + DELCONDITIONAL)
+                .setUri(BASE_URI + DEL_CONDITIONAL)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
                 .setEntity(new StringEntity("{\"menuid\":\"" + menuid + "\"}", Charset.forName("utf-8")))
                 .build();
@@ -152,7 +152,7 @@ public class MenuApi extends BaseApi {
      */
     public static Menu menuTryMatch(String access_token, String user_id) {
         HttpUriRequest request = RequestBuilder.post()
-                .setUri(BASE_URI + TRYMATCH)
+                .setUri(BASE_URI + TRY_MATCH)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
                 .setEntity(new StringEntity("{\"user_id\":\"" + user_id + "\"}", Charset.forName("utf-8")))
                 .build();
