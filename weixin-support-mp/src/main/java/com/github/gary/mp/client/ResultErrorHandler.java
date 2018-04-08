@@ -1,7 +1,7 @@
-package com.github.gary.client;
+package com.github.gary.mp.client;
 
-import com.github.gary.bean.BaseResult;
-import com.github.gary.tool.JsonTool;
+import com.github.gary.mp.bean.BaseResult;
+import com.github.gary.mp.tool.JsonTool;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
 import org.apache.http.client.methods.HttpUriRequest;

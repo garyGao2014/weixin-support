@@ -1,4 +1,4 @@
-package com.github.gary.client;
+package com.github.gary.mp.client;
 
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpRequest;

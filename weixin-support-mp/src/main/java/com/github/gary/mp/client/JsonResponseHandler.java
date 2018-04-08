@@ -1,6 +1,6 @@
-package com.github.gary.client;
+package com.github.gary.mp.client;
 
-import com.github.gary.tool.JsonTool;
+import com.github.gary.mp.tool.JsonTool;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;

@@ -1,4 +1,4 @@
-package com.github.gary.tool;
+package com.github.gary.mp.tool;
 
 import com.alibaba.fastjson.JSON;
 

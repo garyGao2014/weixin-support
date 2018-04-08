@@ -1,16 +1,15 @@
-package com.github.gary.api.menu;
+package com.github.gary.mp.api.menu;
 
-import com.github.gary.api.BaseApi;
-import com.github.gary.bean.BaseResult;
-import com.github.gary.bean.menu.*;
-import com.github.gary.client.LocalHttpClient;
-import com.github.gary.tool.JsonTool;
+import com.github.gary.mp.api.BaseApi;
+import com.github.gary.mp.bean.BaseResult;
+import com.github.gary.mp.bean.menu.*;
+import com.github.gary.mp.client.LocalHttpClient;
+import com.github.gary.mp.tool.JsonTool;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.entity.StringEntity;
 
 import java.nio.charset.Charset;
-import java.util.Arrays;
 
 /**
  * 菜单api

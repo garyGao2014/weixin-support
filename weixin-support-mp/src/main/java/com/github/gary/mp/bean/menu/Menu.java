@@ -1,6 +1,6 @@
-package com.github.gary.bean.menu;
+package com.github.gary.mp.bean.menu;
 
-import com.github.gary.bean.BaseResult;
+import com.github.gary.mp.bean.BaseResult;
 
 import java.util.List;
 

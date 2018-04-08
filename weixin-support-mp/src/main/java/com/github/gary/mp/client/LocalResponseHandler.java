@@ -1,4 +1,4 @@
-package com.github.gary.client;
+package com.github.gary.mp.client;
 
 /**
  * @author garygao

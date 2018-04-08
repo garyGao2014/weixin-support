@@ -1,8 +1,8 @@
-package com.github.gary.api.token;
+package com.github.gary.mp.api.token;
 
-import com.github.gary.api.BaseApi;
-import com.github.gary.bean.token.Token;
-import com.github.gary.client.LocalHttpClient;
+import com.github.gary.mp.api.BaseApi;
+import com.github.gary.mp.bean.token.Token;
+import com.github.gary.mp.client.LocalHttpClient;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 

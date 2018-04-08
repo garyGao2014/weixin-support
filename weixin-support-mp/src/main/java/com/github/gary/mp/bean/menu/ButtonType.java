@@ -1,4 +1,4 @@
-package com.github.gary.bean.menu;
+package com.github.gary.mp.bean.menu;
 
 /**
  * @author garygao

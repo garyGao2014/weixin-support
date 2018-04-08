@@ -1,7 +1,7 @@
-package com.github.gary.bean.token;
+package com.github.gary.mp.bean.token;
 
 import com.alibaba.fastjson.JSON;
-import com.github.gary.bean.BaseResult;
+import com.github.gary.mp.bean.BaseResult;
 
 /**
  * @author garygao

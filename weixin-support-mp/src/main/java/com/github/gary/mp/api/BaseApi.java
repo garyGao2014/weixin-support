@@ -1,4 +1,4 @@
-package com.github.gary.api;
+package com.github.gary.mp.api;
 
 import org.apache.http.Header;
 import org.apache.http.HttpHeaders;

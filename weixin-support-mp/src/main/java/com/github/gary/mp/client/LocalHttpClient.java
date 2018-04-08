@@ -1,6 +1,6 @@
-package com.github.gary.client;
+package com.github.gary.mp.client;
 
-import com.github.gary.Version;
+import com.github.gary.mp.Version;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHeaders;
