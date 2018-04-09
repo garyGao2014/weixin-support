@@ -54,7 +54,7 @@ public class MenuApi extends BaseApi {
                 .setUri(BASE_URI + CREATE)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
                 .setHeader(jsonHeader)
-                .setEntity(new StringEntity(menuJson, Charset.forName("utf-8")))
+                .setEntity(new StringEntity(menuJson, Charset.forName(REQ_CHARSET_UTF_8)))
                 .build();
         return LocalHttpClient.executeJsonResult(request, BaseResult.class);
     }
@@ -121,7 +121,7 @@ public class MenuApi extends BaseApi {
                 .setUri(BASE_URI + ADD_CONDITIONAL)
                 .setHeader(jsonHeader)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
-                .setEntity(new StringEntity(menuJson, Charset.forName("utf-8")))
+                .setEntity(new StringEntity(menuJson, Charset.forName(REQ_CHARSET_UTF_8)))
                 .build();
         return LocalHttpClient.executeJsonResult(request, Menu.class);
     }
@@ -137,7 +137,7 @@ public class MenuApi extends BaseApi {
         HttpUriRequest request = RequestBuilder.post()
                 .setUri(BASE_URI + DEL_CONDITIONAL)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
-                .setEntity(new StringEntity("{\"menuid\":\"" + menuid + "\"}", Charset.forName("utf-8")))
+                .setEntity(new StringEntity("{\"menuid\":\"" + menuid + "\"}", Charset.forName(REQ_CHARSET_UTF_8)))
                 .build();
         return LocalHttpClient.executeJsonResult(request, BaseResult.class);
     }
@@ -153,7 +153,7 @@ public class MenuApi extends BaseApi {
         HttpUriRequest request = RequestBuilder.post()
                 .setUri(BASE_URI + TRY_MATCH)
                 .addParameter(PARAM_ACCESS_TOKEN, access_token)
-                .setEntity(new StringEntity("{\"user_id\":\"" + user_id + "\"}", Charset.forName("utf-8")))
+                .setEntity(new StringEntity("{\"user_id\":\"" + user_id + "\"}", Charset.forName(REQ_CHARSET_UTF_8)))
                 .build();
         return LocalHttpClient.executeJsonResult(request, Menu.class);
     }

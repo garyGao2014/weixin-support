@@ -7,6 +7,9 @@ import com.github.gary.mp.bean.BaseResult;
  * @author garygao
  **/
 public class Token extends BaseResult {
+    /**
+     * access_token
+     */
     private String access_token;
     /**
      * access_token有效期

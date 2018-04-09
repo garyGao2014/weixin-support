@@ -32,7 +32,7 @@ public class LocalHttpClient {
 
     private static ResultErrorHandler resultErrorHandler;
 
-    protected static final Header userAgentHeader = new BasicHeader(HttpHeaders.USER_AGENT, "weixin-support sdk java -v " + Version.VERSION);
+    protected static final Header userAgentHeader = new BasicHeader(HttpHeaders.USER_AGENT, "weixin-support sdk java " + Version.VERSION);
 
     public static CloseableHttpResponse execute(HttpUriRequest request) {
         loggerRequest(request);
