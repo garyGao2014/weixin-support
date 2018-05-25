@@ -10,7 +10,7 @@ import org.apache.http.message.BasicHeader;
  **/
 public abstract class BaseApi {
     /**
-     * 通用域名，使用该域名将访问官方指定就近的接入点；
+     * 通用域名，使用该域名将访问官方指定就近的接入点
      */
     protected final static String BASE_URI = "https://api.weixin.qq.com";
 
